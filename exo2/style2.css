@@ -1,0 +1,451 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #bbb;
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  font-family: 'Barlow Condensed', Arial Narrow, sans-serif;
+}
+
+.journal {
+  width: 740px;
+  background: #ffffff;
+  border: 1px solid hsl(120, 7%, 92%);
+  color: #111;
+  font-size: 13px;
+}
+
+
+.topbar {
+  display: grid;
+  grid-template-columns: 140px 1fr 200px;
+  border-bottom: 3px solid #a0d4e3;
+  padding: 6px 8px 4px;
+  gap: 0;
+  align-items: stretch;
+  min-height: 125px;
+}
+
+.logo-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-right: 8px;
+  border-right: 1px solid #95c0c9;
+  padding-bottom: 15px;
+}
+
+.logo-svg {
+  width: 110px;
+  height: 70px;
+}
+
+.logo-minutes {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #859dc4;
+  letter-spacing: 4px;
+  text-transform: lowercase;
+  margin-top: 1px;
+}
+
+.edition-badge {
+  background: #7e97cb;
+  color: #320e0e;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  padding: 2px 5px;
+  margin-top: 5px;
+  text-transform: uppercase;
+}
+
+.top-stories {
+  padding: 5px 10px;
+  border-right: 1px solid #aebee2;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+}
+
+.story-item {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.story-img {
+  width: 88px;
+  height: 60px;
+  flex-shrink: 0;
+  background: #aac8e0 no-repeat center center / cover;
+}
+
+.story-text { flex: 1; }
+
+.story-cat {
+  font-size: 12px;
+  font-weight: 900;
+  color: #acd6e0;
+  margin-bottom: 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.story-text p {
+  font-size: 11.5px;
+  line-height: 1.32;
+  color: #222;
+}
+
+.page-ref {
+  font-size: 10px;
+  color: #666666;
+  font-weight: 700;
+}
+
+
+.top-right {
+  padding-left: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+}
+
+.avec-vous-block {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.av-num {
+  background: #003399;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 900;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: -1px;
+}
+
+.av-texte { display: flex; flex-direction: column; line-height: 1.1; }
+.av-avec  { font-size: 12px; font-weight: 700; color: #003399; }
+.av-vous  { font-size: 12px; font-weight: 700; color: #003399; }
+
+.podcast-block {
+  display: flex;
+  gap: 6px;
+  align-items: flex-start;
+}
+
+.podcast-img {
+  width: 55px;
+  height: 55px;
+  flex-shrink: 0;
+  background: #d2b17e no-repeat center center / cover;
+}
+
+.podcast-text {
+  font-size: 11px;
+  line-height: 1.4;
+  color: #222;
+}
+
+.podcast-text strong { font-weight: 700; }
+
+
+.dateline {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  color: #444;
+  padding: 3px 10px;
+  border-top: 1px solid #cccccc;
+  border-bottom: 1px solid #aaa;
+}
+
+
+.corps { display: flex; }
+
+
+.sidebar {
+  width: 132px;
+  flex-shrink: 0;
+  border-right: 1px solid #ccc;
+  padding: 8px 7px 8px 14px;
+  position: relative;
+}
+
+.sidebar-vertical {
+  position: absolute;
+  left: 3px;
+  top: 10px;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  font-size: 6.5px;
+  color: #aaa;
+  white-space: nowrap;
+  letter-spacing: 0.2px;
+  height: 180px;
+  overflow: hidden;
+}
+
+.sb-item { margin-bottom: 11px; }
+
+.sb-img {
+  width: 100%;
+  height: 70px;
+  background: #aaa no-repeat center center / cover;
+  margin-bottom: 4px;
+}
+
+.sb-cat {
+  font-size: 12px;
+  font-weight: 900;
+  color: #003399;
+  border-top: 2px solid #003399;
+  padding-top: 2px;
+  margin-bottom: 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.sb-txt {
+  font-size: 11.5px;
+  line-height: 1.3;
+  color: #111;
+  margin-bottom: 2px;
+}
+
+.sb-page {
+  font-size: 9px;
+  color: #666;
+  font-weight: 700;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.hero {
+  position: relative;
+  flex: 1;
+  min-height: 430px;
+  background-color: #4a5a50;
+  background-size: cover;
+  background-position: center top;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.10) 0%,
+    rgba(0,0,0,0.04) 35%,
+    rgba(0,0,0,0.50) 80%,
+    rgba(0,0,0,0.70) 100%
+  );
+}
+
+.hero-titre {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  right: 14px;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 60px;
+  font-weight: 900;
+  font-style: italic;
+  color: #fff;
+  line-height: 1.0;
+  text-shadow: 1px 2px 12px rgba(0,0,0,0.65);
+  z-index: 2;
+}
+
+.hero-legende {
+  position: relative;
+  z-index: 2;
+  background: rgba(255,255,255,0.14);
+  color: #ffffff;
+  font-size: 13px;
+  line-height: 1.5;
+  padding: 10px 14px 12px;
+}
+
+.hero-credit {
+  display: block;
+  font-size: 9px;
+  color: rgba(202, 238, 129, 0.65);
+  margin-bottom: 4px;
+}
+
+
+.footer {
+  border-top: 2px solid #b9c3d6;
+  display: flex;
+  align-items: stretch;
+  min-height: 74px;
+  background: #fff;
+}
+
+.footer-gauche {
+  padding: 6px 8px;
+  border-right: 1px solid #ccc;
+  width: 165px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+}
+
+.raja-titre { font-size: 20px; font-weight: 900; }
+.raja-r     { color: #48a2bb; }
+
+.raja-sous {
+  font-size: 7px;
+  color: #666;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.raja-event {
+  font-size: 7.5px;
+  color: #111;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.4;
+  margin-top: 2px;
+}
+
+.footer-logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+  margin-top: 4px;
+  align-items: center;
+}
+
+.fl {
+  font-size: 7px;
+  font-weight: 700;
+  padding: 1px 3px;
+  border: 0.5px solid #999;
+  color: #444;
+}
+
+.sncf-logo { background: #c5717f; color: #fff; border-color: #e60026; }
+.vingt     { background: #003399; color: #fff; border-color: #003399; }
+
+.footer-centre {
+  padding: 6px 10px;
+  border-right: 1px solid #ccc;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+}
+
+.paris-ang {
+  font-size: 9px;
+  font-weight: 900;
+  color: #003399;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.paris-tgv {
+  font-size: 9px;
+  font-weight: 700;
+  color: #855151;
+  text-transform: uppercase;
+}
+
+.sncf-badge {
+  display: inline-block;
+  background: #ab6c77;
+  color: #fff;
+  font-size: 8px;
+  font-weight: 900;
+  padding: 1px 5px;
+  margin: 2px 0;
+  width: fit-content;
+}
+
+.paris-info {
+  font-size: 7.5px;
+  color: #555;
+  line-height: 1.35;
+}
+
+.footer-mascotte {
+  width: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid #ccc;
+  padding: 4px;
+  overflow: hidden;
+}
+
+.mascotte-img {
+  width: 70px;
+  height: 66px;
+  background: #e8d090 no-repeat center center / cover;
+}
+
+
+.footer-droite {
+  background: #6c91a4;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 8px 1px;
+}
+
+.ang-titre {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 44px;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1;
+  letter-spacing: 1px;
+}
+
+.ang-sous {
+  font-size: 10px;
+  color: rgba(255,255,255,0.92);
+  margin-top: 4px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+
+.pub-label {
+  font-size: 8px;
+  color: #999;
+  text-align: right;
+  padding: 2px 5px;
+  border-top: 0.5px solid #ddd;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}

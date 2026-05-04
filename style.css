@@ -1,0 +1,175 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BACKGROUND animé */
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, #1e3c72, #2a5298, #6a11cb);
+    background-size: 300% 300%;
+    animation: bgMove 8s infinite alternate;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Animation fond */
+@keyframes bgMove {
+    0% { background-position: left; }
+    100% { background-position: right; }
+}
+
+/* CARTE */
+.form {
+    width: 666px;
+    padding: 40px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+    color: white;
+
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* TITRE */
+.form h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+/* INPUT BOX */
+.input-box {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+/* INPUT */
+.input-box input {
+    width: 100%;
+    padding: 12px 10px;
+    padding-left: 35px;
+
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid rgba(255,255,255,0.5);
+    outline: none;
+    color: white;
+    font-size: 15px;
+}
+
+/* ICONES (fake avec before) */
+.input-box::before {
+    content: "✦";
+    position: absolute;
+    left: 5px;
+    top: 12px;
+    color: #00f2fe;
+    font-size: 12px;
+}
+
+/* LABEL */
+.input-box label {
+    position: absolute;
+    top: 12px;
+    left: 35px;
+    color: #ccc;
+    transition: 0.3s;
+}
+
+/* ANIMATION LABEL */
+.input-box input:focus + label,
+.input-box input:valid + label {
+    top: -10px;
+    font-size: 11px;
+    color: #00f2fe;
+}
+
+/* FOCUS GLOW */
+.input-box input:focus {
+    border-bottom: 2px solid #00f2fe;
+    box-shadow: 0 5px 10px rgba(0,242,254,0.3);
+}
+
+/* DATE FIX */
+.date-label {
+    top: -10px;
+    font-size: 11px;
+}
+
+/* SELECT */
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}
+
+/* RADIO */
+.radio-group {
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.radio-group label {
+    display: block;
+    margin: 5px 0;
+    cursor: pointer;
+}
+
+/* TEXTAREA */
+textarea {
+    width: 100%;
+    height: 90px;
+    border-radius: 8px;
+    padding: 10px;
+    border: none;
+    margin-bottom: 15px;
+}
+
+/* CHECKBOX */
+.checkbox {
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+/* BOUTON */
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 30px;
+
+    background: linear-gradient(to right, #00f2fe, #4facfe);
+    color: white;
+    font-size: 16px;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* HOVER */
+button:hover {
+    transform: scale(1.07);
+    box-shadow: 0 0 25px #00f2fe;
+}
+
+/* CLICK */
+button:active {
+    transform: scale(0.97);
+}
